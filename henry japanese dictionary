@@ -44,3 +44,34 @@ result_label.pack(pady=10)
 
 
 root.mainloop()
+
+
+english_to_hausa_dict = {
+    "sit": "zauna",
+    "come": "zo",
+    "go": "je",
+    "eat": "ci",
+    "food": "abinci",
+    "boy": "yaro",
+    "girl": "yarinya",
+    "let's go": "muje",
+    "no": "babu",
+    "stop": "katsaya",
+    "how": "yaya",
+    "there is": "akwai",
+    "water": "ruwa",
+    "sea": "teko",
+    "road": "hanya",
+    "bush": "daji",
+    "book": "littafi",
+    "shirt": "riga",
+    "door": "kofa",
+    "knife": "wuka"
+}
+word =input('enter an english word')
+#print(english_to_hausa_dict[word])
+
+if english_to_hausa_dict.get("help"):
+    print("That word exist")
+else:
+    print("Word Not Found")
