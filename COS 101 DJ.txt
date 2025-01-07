@@ -1,0 +1,39 @@
+# Yoruba Dictionary
+yoruba_dict = {
+    "ile": "house",
+    "omi": "water",
+    "ile-iwe": "school",
+    "ounje": "food",
+    "aya": "wife",
+    "baba": "father",
+    "iye": "mother",
+    "omo": "child",
+    "ise": "work",
+    "owo": "money",
+    "igba": "time",
+    "aso": "clothes",
+    "ori": "head",
+    "oju": "eyes",
+    "eti": "ears",
+    "ehin": "back",
+    "owo-ori": "tax",
+    "oruko": "name",
+    "alafia": "peace",
+    "owo-aso": "sleeve"
+}
+
+# Search Functionality
+def search_yoruba_dictionary():
+    print("Welcome to the Yoruba Dictionary!")
+    while True:
+        search_word = input("Enter a Yoruba word to search (or type 'exit' to quit): ").lower()
+        if search_word == "exit":
+            print("Exiting the Yoruba Dictionary. Goodbye!")
+            break
+        elif search_word in yoruba_dict:
+            print(f"{search_word.capitalize()} means '{yoruba_dict[search_word]}' in English.")
+        else:
+            print(f"'{search_word}' is not in the Yoruba Dictionary. Please try another word.")
+
+# Run the search
+search_yoruba_dictionary()
