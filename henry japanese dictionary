@@ -37,6 +37,29 @@ english_to_hausa_dict = {
     "knife": "wuka"
 }
 
+yoruba_dict = {
+    "ile": "house",
+    "omi": "water",
+    "ile-iwe": "school",
+    "ounje": "food",
+    "aya": "wife",
+    "baba": "father",
+    "iye": "mother",
+    "omo": "child",
+    "ise": "work",
+    "owo": "money",
+    "igba": "time",
+    "aso": "clothes",
+    "ori": "head",
+    "oju": "eyes",
+    "eti": "ears",
+    "ehin": "back",
+    "owo-ori": "tax",
+    "oruko": "name",
+    "alafia": "peace",
+    "owo-aso": "sleeve"
+}
+
 
 def search2_translation():
     word = entry.get().lower().strip()
@@ -52,6 +75,12 @@ def search_translation():
     else:
         messagebox.showerror("Error", 'word not found')
 
+def search_translation():
+    word = entry.get().lower().strip()
+    if word in yoruba_dictionary:
+        result_var.set(f"translatiom: {yoruba_dictionary[word]}")
+    else:
+        messagebox.showerror("Error", 'word not found')
 
 root = tk.Tk()
 root.title('dictionary')
@@ -70,6 +99,10 @@ search_button.pack(pady=10)
 
 search_button = tk.Button(root, text="HAUSA", command=search2_translation)
 search_button.pack(pady=10)
+
+search_button = tk.Button(root, text="yoruba", command=search_translation)
+search_button.pack(pady=10)
+
 
 result_var = tk.StringVar()
 result_label = tk.Label(root,  textvariable=result_var, font=("Arial", 14))
