@@ -37,7 +37,7 @@ english_to_hausa_dict = {
 }
 
 
-def search_translation():
+def search2_translation():
     word = entry.get().lower().strip()
     if word in english_to_hausa_dict:
         result_var.set(f"translation: {english_to_hausa_dict[word]}")
@@ -66,6 +66,9 @@ entry = tk.Entry(root, width=40)
 entry.pack(pady=5)
 
 search_button = tk.Button(root, text="japanese", command=search_translation)
+search_button.pack(pady=10)
+
+search_button = tk.Button(root, text="HAUSA", command=search2_translation)
 search_button.pack(pady=10)
 
 result_var = tk.StringVar()
