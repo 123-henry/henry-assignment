@@ -12,6 +12,7 @@ japanese_dictionary = {"こんにちは": "Hello",       #
                         "愛": "Love",              # Love
                         "食べる": " Eat",         #
                         "本": "book"
+                       }
 
 english_to_hausa_dict = {
     "sit": "zauna",
@@ -43,7 +44,6 @@ def search2_translation():
         result_var.set(f"translation: {english_to_hausa_dict[word]}")
     else:
         messagebox.showerror("Error", 'word not found')
-                       }
 
 def search_translation():
     word = entry.get().lower().strip()
