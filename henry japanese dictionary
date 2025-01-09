@@ -2,16 +2,26 @@ import tkinter as tk
 from tkinter import messagebox
 
 
-japanese_dictionary = {"こんにちは": "Hello",       #
-                        "ありがとう": " Thank you",     #
-                        "さようなら": "Goodbye",      #
-                        "はい": " Yes",              #
-                        "いいえ": "No",            # No
-                        "おはよう": "Good morning",  #
-                        "こんばんは": "Good evening",  #
-                        "愛": "Love",              # Love
-                        "食べる": " Eat",         #
-                        "本": "book"
+japanese_dictionary = {"こんにちは": "Hello",       
+                        "ありがとう": " Thank you",     
+                        "さようなら": "Goodbye",      
+                        "はい": " Yes",              
+                        "いいえ": "No",            
+                        "おはよう": "Good morning",  
+                        "こんばんは": "Good evening",  
+                        "愛": "Love",              
+                        "食べる": " Eat",         
+                        "飲む": "To drink",
+                        "学校": "School",
+                        "仕事": "Work",
+                        "寝る": "To sleep",
+                        "音楽": "Friend",
+                        "音楽": "Music",
+                        "映画 ": "Movie",
+                        "犬": "dog",
+                        "猫": "cat",
+                        "日本": "Japan",
+
                        }
 
 english_to_hausa_dict = {
@@ -75,7 +85,7 @@ def search_translation():
     else:
         messagebox.showerror("Error", 'word not found')
 
-def search_translation():
+def search3_translation():
     word = entry.get().lower().strip()
     if word in yoruba_dictionary:
         result_var.set(f"translatiom: {yoruba_dictionary[word]}")
@@ -100,7 +110,7 @@ search_button.pack(pady=10)
 search_button = tk.Button(root, text="HAUSA", command=search2_translation)
 search_button.pack(pady=10)
 
-search_button = tk.Button(root, text="yoruba", command=search_translation)
+search_button = tk.Button(root, text="yoruba", command=search3_translation)
 search_button.pack(pady=10)
 
 
