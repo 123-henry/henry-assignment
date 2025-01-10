@@ -47,7 +47,7 @@ english_to_hausa_dict = {
     "knife": "wuka"
 }
 
-yoruba_dict = {
+yoruba_dictionary = {
     "ile": "house",
     "omi": "water",
     "ile-iwe": "school",
