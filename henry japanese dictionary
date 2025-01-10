@@ -70,6 +70,29 @@ yoruba_dictionary = {
     "owo-aso": "sleeve"
 }
 
+spanish_to_english = {
+    'hola': 'hello',
+    'adiós': 'goodbye',
+    'gracias': 'thank you',
+    'por favor': 'please',
+    'perdón': 'sorry',
+    'sí': 'yes',
+    'no': 'no',
+    'amigo': 'friend',
+    'familia': 'family',
+    'casa': 'house',
+    'libro': 'book',
+    'comida': 'food',
+    'agua': 'water',
+    'gato': 'cat',
+    'perro': 'dog',
+    'escuela': 'school',
+    'trabajo': 'work',
+    'fiesta': 'party',
+    'feliz': 'happy',
+    'triste': 'sad'
+}
+
 
 def search2_translation():
     word = entry.get().lower().strip()
@@ -92,6 +115,14 @@ def search3_translation():
     else:
         messagebox.showerror("Error", 'word not found')
 
+def search_translation4():
+    word = entry.get().lower().strip()
+    if word in spanish_to_english:
+        result_var.set(f"translation: {spanish_to_english[word]}")
+    else:
+        messagebox.showerror("Error", 'word not found')
+
+
 root = tk.Tk()
 root.title('dictionary')
 
@@ -112,6 +143,10 @@ search_button.pack(pady=10)
 
 search_button = tk.Button(root, text="yoruba", command=search3_translation)
 search_button.pack(pady=10)
+
+search_button = tk.Button(root, text="spanish", command=search_translation4)
+search_button.pack(pady=10)
+
 
 
 result_var = tk.StringVar()
