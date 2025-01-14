@@ -94,6 +94,36 @@ spanish_to_english = {
 }
 
 
+Igbo = {"lion":"agu",
+ "war":"agha",
+ "name":"aha",
+ "bag":"akpa",
+ "night":"abali",
+ "fish":"azu",
+ "dog":"nkita",
+ "child":"nwa",
+ "father":"nna",
+ "spoon":"ngazi",
+ "town":"obodo",
+ "bedroom":"obu",
+ "black":"oji",
+ "boss":"onye isi",
+ "rice":"osikapa",
+ "tree":"osisi",
+ "cold":"oyi",
+ "hawk":"egbe",
+ "cow":"ehi",
+ "goat":"ewu",
+ }
+
+def search_translation():
+    word = entry.get().lower().strip()  # Get the word from the search bar
+    if word in Igbo:
+        result_var.set(f"Translation: {Igbo[word]}")
+    else:
+       messagebox.showerror("Error",  "Word not found in dictionary")
+
+
 def search2_translation():
     word = entry.get().lower().strip()
     if word in english_to_hausa_dict:
@@ -134,6 +164,9 @@ label.pack(pady=10)
 
 entry = tk.Entry(root, width=40)
 entry.pack(pady=5)
+
+search_button =tk.Button(root, text="Search", command=search_translation)
+search_button.pack(pady=10)
 
 search_button = tk.Button(root, text="japanese", command=search_translation)
 search_button.pack(pady=10)
